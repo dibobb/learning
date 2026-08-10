@@ -124,13 +124,26 @@
 require("dotenv").config();
 const telegramBot = require("node-telegram-bot-api").default;
 const axios = require("axios");
-const { assert, log } = require("console");
+const { assert, log, trace } = require("console");
+const { resolve } = require("dns");
 const fs = require("fs");
 const { type } = require("os");
 
 const bot = new telegramBot(process.env.TOKEN, {
     polling: true
 });
+
+
+ 
+
+if(!process.env.TOKEN){
+    console.log("TOKEN Toplmadi!");
+    process.exit();
+    
+}
+
+// console.log(process.cwd());
+
 
 const userState = {};
 
@@ -144,7 +157,7 @@ bot.on("message", async (msg) => {
 
 
 
-  if(text ==="/freeBobux".toLocaleLowerCase() || text === "/freeBobux"){
+  if(text ==="/freebobux"){
          await bot.sendMessage(
                 chatID,
                 "Kambag'aaaaaal ishla 😂🖕"
@@ -244,7 +257,7 @@ bot.on("message", async (msg) => {
 
             await bot.sendMessage(
                 chatID,
-                "Mavjud kodlar ro'yxati: /Kroyxatskibidi"
+                "Mavjud kodlar ro'yxati: /kroyxatskibidi"
             );
 
             break;
@@ -254,7 +267,7 @@ bot.on("message", async (msg) => {
             await bot.sendMessage(chatID, "Kino nomini kiriting...")
 
          break;
-        case "/Kroyxatskibidi":
+        case "/kroyxatskibidi":
 
             await bot.sendMessage(
                 chatID,
@@ -298,7 +311,7 @@ bot.on("message", async (msg) => {
 `hello ${username} 😉
 
 mavjud commandlar:
- /start | /freeBobux | /time | /stock | /sticker | /photos \n | /my` 
+ /start | /freebobux | /time | /stock | /sticker | /photos \n | /my` 
                 }
             );
 
@@ -366,37 +379,63 @@ mavjud commandlar:
             break;
 
 
-        case "/stock":
+      case "/stock":
 
-            try {
+    try {
 
-                const response = await axios.get(
-                    "https://blox-fruits-api.onrender.com/api/bloxfruits/stock"
-                );
-
-                if(Object.keys(stock).length === 0){
-                    bot.sendMessage(chatID, "hozircha stockda hechnarsa yo'q😊")
-                }
-
-                console.log(response.data);
-
-                await bot.sendMessage(
-                    chatID,
-                    JSON.stringify(response.data)
-                );
-
-            } catch(err){
-
-                console.log(err);
-
-                await bot.sendMessage(
-                    chatID,
-                    "The stock is currently unavailable 😔"
-                );
-
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users/1",
+            {
+                // headers: {
+                //     "Content-Type": "application/json",
+                //     "x-rapidapi-host": "blox-fruit-stock-fruit.p.rapidapi.com",
+                //     "x-rapidapi-key": process.env.RAPIDAPI_KEY
+                // }
             }
+        );
+
+        const res = await response.json();
+
+
+        const stock = res;
+
+
+        
+
+
+        if (!stock || Object.keys(stock).length === 0) {
+
+            await bot.sendMessage(
+                chatID,
+                "🍎 Hozircha stockda hech narsa yo'q 😊"
+            );
 
             break;
+        }
+
+
+        console.log(stock);
+
+
+        await bot.sendMessage(
+            chatID,
+            `🍎 Blox Fruits Stock:\n\n${JSON.stringify(stock, null, 2)}`
+        );
+
+
+    } catch (err) {
+
+        console.log("Stock error:", err.message);
+
+
+        await bot.sendMessage(
+            chatID,
+            "❌ Stockni olishda xatolik yuz berdi 😔"
+        );
+
+    }
+
+break;
 
 
         default:
@@ -458,6 +497,10 @@ mavjud commandlar:
                            {
                             text: "Raix",
                             callback_data: "Raix"
+                           },
+                           {
+                          text: "Aizwixx",
+                          callback_data: "aiz"
                            },
                         //    {
                         //     text: "videos",
@@ -524,20 +567,17 @@ mavjud commandlar:
 
                     break;
 
-                    case "secret":
-                        bot.sendVideo(chatID, "BAACAgIAAxkBAAIFVWpuHQgRqtVL6dmC38JvqGid-OG3AAKrlQACbr6ASkCXMFP7HO4WPQQ")
+                   
+              
 
-                        break;
-
-                        case "to lick":
-                        case "To lick":
-                            bot.sendSticker(chatID, "CAACAgIAAxkBAAIFYmpuH5ZVX6fZCrFzWcKOwhWbBq7rAAKJcAACigABKEsQZoQUNViG3D0E")    
-    }
+                        }
 
 });
 
 
-
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
 
 
 
@@ -564,6 +604,10 @@ bot.on("callback_query", async (query)=> {
                 media: "./pictures/kot.png"
             }
         ])
+    }else if (query.data === "aiz"){
+      await  bot.sendPhoto(chatID, "AgACAgIAAxkBAAIGHWpuYcpkBWhqObBWA4JEJIm_JMpwAAJuGmsbqrh4S2RjOoE4iCDIAQADAgADeAADPQQ");
+      await sleep(300);
+       bot.sendMessage(chatID, "@KR0V0stok")
     }
 
   switch(query.data){
@@ -633,7 +677,86 @@ bot.on("callback_query", async (query)=> {
     console.log("Video id:", msg.video.file_id);
     
   }
+ if(msg.photo){
+    console.log("photo id:", msg.photo[msg.photo.length - 1].file_id);
+    
+  }
+
+
 });
+
+console.log(process.uptime());
+async function myCommands () {
+    try{
+ await  bot.setMyCommands([
+
+  {
+    command: "start",
+    description: "Botni ishga tushirish"
+  },
+  {
+    command: "time",
+    description: "Hozirgi vaqt"
+  },
+  {
+    command: "stock",
+    description: "Stockni ko'rish"
+  },
+  {
+    command: "sticker",
+    description: "Sticker yuborish"
+  },
+  {
+    command: "photos",
+    description: "Rasmlar menyusi"
+  },
+  {
+    command: "my",
+    description: "Musiqalar ro'yxati"
+  },
+  {
+    command: "freebobux",
+    description: "😂 Bepul Bobux"
+  },
+  {
+    command: "kroyxatskibidi",
+    description: "Kino kodlari ro'yxati"
+  },
+  {
+    command: "sybau",
+    description: "Sticker yuborish"
+  }
+])}catch(error){
+    console.log(error);
+    
+}
+};
+
+// bot.onText(/\/stock/, async (msg) => {
+//     const chatID = msg.chat.id;
+//     if(text === "stock"){
+//     try {
+//         const { data } = await axios.get("https://blox-fruit-stock-fruit.p.rapidapi.com/");
+
+//         let text = "🍎 Normal Stock\n\n";
+
+//         data.normal.forEach(fruit => {
+//             text += `• ${fruit}\n`;
+//         });
+
+//         text += "\n✨ Mirage Stock\n\n";
+
+//         data.mirage.forEach(fruit => {
+//             text += `• ${fruit}\n`;
+//         });
+
+//         await bot.sendMessage(chatID, text);
+
+//     } catch (err) {
+//         await bot.sendMessage(chatID, "❌ Stockni olib bo'lmadi.");
+//         console.log(err);
+//     }}
+// });
 
 
 
@@ -659,3 +782,28 @@ bot.on("callback_query", async (query)=> {
 // } else {
 //     await bot.sendSticker(chatID, "...");
 // }
+
+
+
+// A simple format!:
+
+
+// const text = Object.entries(stock).map((item) => {
+
+//         if (typeof item[1] === "object") {
+
+//             return Object.entries(item[1])
+//                 .map((item2) => `"${item2[0]}": ${JSON.stringify(item2[1])}`)
+//                 .join("\n");
+
+//         }
+
+//         return `"${item[0]}": ${JSON.stringify(item[1])}`;
+
+//     })
+//     .join("\n");
+
+// await bot.sendMessage(
+//     chatID,
+//     `🍎 Blox Fruits Stock:\n\n${text}`
+// );
