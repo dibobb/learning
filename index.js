@@ -919,7 +919,7 @@ bot.on("message", async (msg) => {
 
             case "Music":
 
-         await  bot.sendMessage(chatID, ` Bor musiclar: \n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4:Rise up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise `,
+         await  bot.sendMessage(chatID, ` Bor musiclar: \n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4:Rise up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive `,
 
              {
                parse_mode: "HTML",
