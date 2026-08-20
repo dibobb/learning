@@ -1361,7 +1361,7 @@ bot.on("callback_query", async (query)=> {
             await bot.sendAudio(chatID ,  "CQACAgQAAxkBAAIFJGptNVvRORJgTbuy9hCq48NzmWcKAAKDBwACphOpUGcaLIhmyfdtPQQ")
             break;
             case "music_6":
-                await bot.sendMessage(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
+                await bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
                 break;
         }
         
