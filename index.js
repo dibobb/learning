@@ -930,7 +930,8 @@ bot.on("message", async (msg) => {
                              {text: "2", callback_data: "music_2"},
                              {text: "3", callback_data: "music_3"},
                              {text: "4", callback_data: "music_4"},
-                             {text: "5", callback_data: "music_5"}
+                             {text: "5", callback_data: "music_5"},
+                             {text: "6", callback_data: "music_6"}
                             
                         ]
                     ]
@@ -1228,7 +1229,7 @@ break;
               break;
 
             case "/my":
- bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n Dive ",
+ bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive ",
     {
     reply_markup:{
         inline_keyboard:[
