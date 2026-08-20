@@ -1228,7 +1228,7 @@ break;
               break;
 
             case "/my":
- bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise ",
+ bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n Dive ",
     {
     reply_markup:{
         inline_keyboard:[
@@ -1239,6 +1239,7 @@ break;
                 {text: "3", callback_data: "music_3"},
                 {text: "4", callback_data: "music_4"},
                 {text: "5", callback_data: "music_5"},
+                {text: "6", callback_data: "music_6"},
 
             ]   
                 
@@ -1357,6 +1358,10 @@ bot.on("callback_query", async (query)=> {
 
            case "music_5":
             await bot.sendAudio(chatID ,  "CQACAgQAAxkBAAIFJGptNVvRORJgTbuy9hCq48NzmWcKAAKDBwACphOpUGcaLIhmyfdtPQQ")
+            break;
+            case "music_6":
+                await bot.sendMessage(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
+                break;
         }
         
     });
