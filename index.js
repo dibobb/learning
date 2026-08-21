@@ -1149,12 +1149,12 @@ break;
 
  case "/cringe":
 
- if(username !== "@Motiondibob"){
+ if(username === "@Motiondibob"){
+     bot.sendMessage(chatID, "🦝 Hello!");
+    }
     bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob");
     bot.sendMessage(chatID , "or you Enter the pass key to use this command! ")
- }
 
- bot.sendMessage(chatID, "🦝 Hello!");
 
  break;
 
