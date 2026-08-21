@@ -828,8 +828,10 @@ const fs = require("fs");
 const { type } = require("os");
 const express = require("express");
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 
 app.get("/", (req, res) => {
     res.send("Bot is running!");
@@ -1154,8 +1156,20 @@ break;
      bot.sendMessage(chatID, "🦝 Hello!");
      return;
     }
-    bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob");
-    bot.sendMessage(chatID , "or you Enter the pass key to use this command! ")
+    bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob")
+    bot.sendMessage(chatID, "or you can enter the pass key to use this command!", {
+        reply_markup: {
+            inline_keyboard: [
+                [
+                    {text: "Okay✅", callback_data: "cringe_okay"},
+                    {text: "Okay❌", callback_data: "cringe_cancel"}
+
+
+                ]
+            ]
+        }
+    });
+
 
 
  break;
@@ -1377,6 +1391,13 @@ bot.on("callback_query", async (query)=> {
             case "music_6":
                 await bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
                 break;
+
+                case "cringe_okay":
+                    bot.sendMessage(chatID, "Waiting for the pass key...");
+                    if(query === "12312318"){
+                        bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ" )
+                    }
+       break;
         }
         
     });
