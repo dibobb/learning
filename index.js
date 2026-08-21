@@ -1148,9 +1148,11 @@ mavjud commandlar:
 break;
 
  case "/cringe":
-
- if(username === "@Motiondibob"){
+ console.log(username);
+ 
+ if(username === "Motiondibob"){
      bot.sendMessage(chatID, "🦝 Hello!");
+     return;
     }
     bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob");
     bot.sendMessage(chatID , "or you Enter the pass key to use this command! ")
@@ -1414,6 +1416,7 @@ bot.on("callback_query", async (query)=> {
 });
 
 console.log(process.uptime());
+
 async function myCommands () {
     try{
  await  bot.setMyCommands([
@@ -1462,3 +1465,6 @@ async function myCommands () {
     
 }
 };
+
+
+myCommands();
