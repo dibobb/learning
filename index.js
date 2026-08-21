@@ -831,6 +831,7 @@ const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const passkey = {};
 
 
 app.get("/", (req, res) => {
@@ -875,6 +876,37 @@ bot.on("message", async (msg) => {
            );
 
   }
+
+
+  if (passkey[chatID]) {
+
+    if (text === "12312318") {
+
+        delete passkey[chatID];
+
+        await bot.sendMessage(
+            chatID,
+            "Access granted ✅"
+        );
+
+        // CRINGE CONTENT
+        await bot.sendAudio(
+            chatID,
+            "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ"
+        );
+
+    } else {
+
+        delete passkey[chatID];
+
+        await bot.sendMessage(
+            chatID,
+            "Wrong pass key ❌"
+        );
+    }
+
+    return;
+}
 
     switch(text) {
 
@@ -1162,7 +1194,7 @@ break;
             inline_keyboard: [
                 [
                     {text: "Okay✅", callback_data: "cringe_okay"},
-                    {text: "Okay❌", callback_data: "cringe_cancel"}
+                    {text: "cancel❌", callback_data: "cringe_cancel"}
 
 
                 ]
@@ -1323,7 +1355,6 @@ function sleep(ms){
 
 bot.on("callback_query", async (query)=> {
     const chatID = query.message.chat.id;
-
     if(query.data === "hello"){
        await  bot.sendPhoto(chatID, "./pictures/image.png")
     }else if (query.data === "/sybau"){
@@ -1393,11 +1424,18 @@ bot.on("callback_query", async (query)=> {
                 break;
 
                 case "cringe_okay":
-                    bot.sendMessage(chatID, "Waiting for the pass key...");
-                    if(query === "12312318"){
-                        bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ" )
-                    }
+                    passkey[chatID] = true;
+                   await  bot.sendMessage(chatID, "Waiting for the pass key...");
+                
+                    
        break;
+
+       case "cringe_calcel":
+        delete passkey[chatID];
+
+        await bot.sendMessage(chatID, "Cancelled!");
+
+        break;
         }
         
     });
