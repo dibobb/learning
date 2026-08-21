@@ -1186,7 +1186,7 @@ break;
  
  if(username === "Motiondibob"){
      bot.sendMessage(chatID, "🦝 Hello!");
-    await  bot.sendAudio(chatID, "GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
+    await  bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
      return;
     }
     bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob")
