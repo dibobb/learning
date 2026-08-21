@@ -844,7 +844,7 @@ const bot = new telegramBot(process.env.TOKEN, {
 });
 
 
-if(!bot){
+if(!process.env.TOKEN){
     console.log("TOKEN Toplmadi!");
     process.exit();
     
