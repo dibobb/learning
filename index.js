@@ -844,7 +844,7 @@ const bot = new telegramBot(process.env.TOKEN, {
 });
 
 
-if(!process.env.TOKEN){
+if(!bot){
     console.log("TOKEN Toplmadi!");
     process.exit();
     
@@ -859,7 +859,8 @@ bot.on("message", async (msg) => {
 
     const chatID = msg.chat.id;
     const text = msg.text?.trim();
-    const username = msg.from.first_name; 
+    const firstname = msg.from.first_name; 
+    const username = msg.from.username
   
     console.log("Kelgan text:", text);
 
@@ -1017,7 +1018,7 @@ bot.on("message", async (msg) => {
                 "./pictures/hello.png",
                 {
                     caption:
-`hello ${username} 😉
+`hello ${firstname} 😉
 
 mavjud commandlar:
  /start | /freebobux | /time | /stock | /sticker | /photos \n | /my` 
@@ -1145,6 +1146,17 @@ mavjud commandlar:
     }
 
 break;
+
+ case "/cringe":
+
+ if(username !== "@Motiondibob"){
+    bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob");
+    bot.sendMessage(chatID , "or you Enter the pass key to use this command! ")
+ }
+
+ bot.sendMessage(chatID, "🦝 Hello!");
+
+ break;
 
 
         default:
@@ -1441,7 +1453,10 @@ async function myCommands () {
   {
     command: "sybau",
     description: "Sticker yuborish"
-  }
+  }, {
+    command: "cringe",
+    description: "cringes"
+  },
 ])}catch(error){
     console.log(error);
     
