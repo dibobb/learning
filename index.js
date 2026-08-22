@@ -921,7 +921,44 @@ bot.on("message", async (msg) => {
         }, {
             type: "photo",
             media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
+        },{
+            type: "photo",
+            media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+        }
+     ]);
+
+        await bot.sendMediaGroup(chatID, [
+        {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
+        }, {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
+        }, {
+            type: "video",
+            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
+
         },
+     ])
+
+     await bot.sendMediaGroup(chatID, [
+        {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
+        }, {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
+        }, {
+            type: "video",
+            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
+
+        },{
+            type: "video",
+            media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
+        },{
+            type: "video",
+            media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+        }
      ])
 
     } else {
@@ -1246,7 +1283,30 @@ break;
         }, {
             type: "photo",
             media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
-        },
+        },{
+            type: "photo",
+            media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+        }
+     ])
+
+     await bot.sendMediaGroup(chatID, [
+        {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
+        }, {
+            type: "video",
+            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
+        }, {
+            type: "video",
+            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
+
+        },{
+            type: "video",
+            media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
+        },{
+            type: "video",
+            media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+        }
      ])
 
      return;
@@ -1493,7 +1553,7 @@ bot.on("callback_query", async (query)=> {
                     
        break;
 
-       case "cringe_calcel":
+       case "cringe_cancel":
         delete passkey[chatID];
 
         await bot.sendMessage(chatID, "Cancelled!");
