@@ -245,6 +245,8 @@ await bot.sendMediaGroup(chatID, [
         case "78":
 
             console.log("code yozildi");
+            
+             await bot.sendMessage(chatID, "Yozildi!")
 
             try {
 
