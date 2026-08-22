@@ -1,6 +1,6 @@
 const fs = require("fs");
 const passkey = {};
-
+const userState = {}
 
 function messages (bot){
 bot.on("message", async (msg) => {
