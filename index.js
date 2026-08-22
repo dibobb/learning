@@ -890,79 +890,87 @@ bot.on("message", async (msg) => {
         );
 
         // CRINGE CONTENT
-        bot.sendMediaGroup(chatID, [
-        {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
-        }, {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
-        }, {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
-        },{
-            type: "photo",
-            media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
-        }
-     ]);
+      // 1-albom: 10 ta photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
+    }
+]);
 
-        await bot.sendMediaGroup(chatID, [
-        {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
-        }, {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
-        }, {
-            type: "video",
-            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
 
-        },
-     ])
+// 2-albom: qolgan 1 ta photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+    }
+]);
 
-     await bot.sendMediaGroup(chatID, [
-        {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
-        }, {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
-        }, {
-            type: "video",
-            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
 
-        },{
-            type: "video",
-            media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
-        },{
-            type: "video",
-            media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
-        },{
-            type: "photo",
-            media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
-        }
-     ])
+// 3-albom: 5 ta video + 1 photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
+    }
+]);
 
     } else {
 
@@ -1255,65 +1263,87 @@ break;
  
  if(username === "Motiondibob"){
      bot.sendMessage(chatID, "Hello!", username);
-     bot.sendMediaGroup(chatID, [
-        {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
-        },  {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
-        }, {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
-        }, {
-            type: "photo",
-            media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
-        },{
-            type: "photo",
-            media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
-        }
-     ])
+    // 1-albom: 10 ta photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
+    },
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
+    }
+]);
 
-     await bot.sendMediaGroup(chatID, [
-        {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
-        }, {
-            type: "video",
-            media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
-        }, {
-            type: "video",
-            media: " BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
 
-        },{
-            type: "video",
-            media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
-        },{
-            type: "video",
-            media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
-        },{
-            type: "photo",
-            media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
-        }
-     ])
+// 2-albom: qolgan 1 ta photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "photo",
+        media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+    }
+]);
+
+
+// 3-albom: 5 ta video + 1 photo
+await bot.sendMediaGroup(chatID, [
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAAFqiOeEKk4B55rC9rOVj-_8h-SPoAACuksAAhRkGEnfkMJRGBKppz0E"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAWqI54Rr6h5vVTZGTkPQ29rfi391AAK-SwACFGQYSapA5HrU9d6rPQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJAmqI54Q2QPAmGOt5-yachdBxppoUAALFSwACFGQYSWLqb6uTU4S6PQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJBmqI6GpTj1KKD2qvmMQZJYJBJfvSAALCpQACwuNJSEEtwdjxdy8_PQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+    },
+    {
+        type: "video",
+        media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
+    }
+]);
 
      return;
     }
