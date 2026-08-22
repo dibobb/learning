@@ -890,10 +890,39 @@ bot.on("message", async (msg) => {
         );
 
         // CRINGE CONTENT
-        await bot.sendAudio(
-            chatID,
-            "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ"
-        );
+        bot.sendMediaGroup(chatID, [
+        {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
+        }, {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
+        }, {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
+        },
+     ])
 
     } else {
 
@@ -1185,8 +1214,41 @@ break;
  console.log(username);
  
  if(username === "Motiondibob"){
-     bot.sendMessage(chatID, "🦝 Hello!");
-    await  bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
+     bot.sendMessage(chatID, "Hello!", username);
+     bot.sendMediaGroup(chatID, [
+        {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIzWqI5duRuwfYMbcVoU0Yj1loc5grAAKHImsbwuNJSCVhbXvx6r6QAQADAgADeAADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIzmqI5dvzWFVa2zphJvnytJe8nlJvAAKNImsbwuNJSN9FRHA59fJiAQADAgADeAADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAIIz2qI5dsUfmc33m4NGitm3hdSJzLnAAKIImsbwuNJSFyOojfsb7BCAQADAgADbQADPQQ"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0GqI5dsO2LEtUiMDQakKYtv3AAGWwQACNRhrG6-bEEs0YnIGPVSz0QEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0WqI5dsLmqFPSrpt8WhPl_kAAR119gACjiJrG8LjSUibU6pJuhquIQEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII0mqI5dvQpiWTQZgkAAH1BLh6H0tj9QACiSJrG8LjSUgRsW-mM6_KXgEAAwIAA3kAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII02qI5dv3AAHfi36bEc2I0tVfdRNseQACiiJrG8LjSUiNBHCfWjvergEAAwIAA3gAAz0E"
+        },  {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1GqI5dveUCTJLLDTT0qpPEafTkNrAAKPImsbwuNJSDPuBmGo-ycYAQADAgADeQADPQQ"
+        }, {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1WqI5dunaUon52-NV3idS0dDqs9vAAKLImsbwuNJSO0PpB7bjTMjAQADAgADeQADPQQ"
+        }, {
+            type: "photo",
+            media: "AgACAgIAAxkBAAII1mqI5dtZ0Sf09UdBqe5-A8bOcgt6AAKMImsbwuNJSBUPTyNmPBDZAQADAgADeAADPQQ"
+        },
+     ])
+
      return;
     }
     bot.sendMessage(chatID, "Sorry you can't use this command , this command avieable only for @Motiondibob")
