@@ -958,6 +958,9 @@ bot.on("message", async (msg) => {
         },{
             type: "video",
             media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+        },{
+            type: "photo",
+            media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
         }
      ])
 
@@ -1306,6 +1309,9 @@ break;
         },{
             type: "video",
             media: "BAACAgIAAxkBAAIJCGqI6Hp4Xvm_Cp69pUvembBnuLvyAAJnjAACPuSQSXsFkISl9JgVPQQ"
+        },{
+            type: "photo",
+            media: "BAACAgIAAxkBAAIJDGqI6Za4r1dytJrBEaetRwhNQgy9AALEpQACwuNJSJgdN9xUIJ5CPQQ"
         }
      ])
 
