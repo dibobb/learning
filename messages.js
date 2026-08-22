@@ -1,6 +1,6 @@
 const fs = require("fs");
 const passkey = {};
-const userState = {}
+// const userState = {}
 
 function messages (bot){
 bot.on("message", async (msg) => {
@@ -134,7 +134,6 @@ await bot.sendMediaGroup(chatID, [
 
         case "Kino":
 
-            userState[chatID] = "Movie";
         
             await bot.sendMessage(
                 chatID,
