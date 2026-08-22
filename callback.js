@@ -1,8 +1,15 @@
 const fs = require("fs");
 const passkey = {}
+
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 function callback (bot){
 bot.on("callback_query", async (query)=> {
     const chatID = query.message.chat.id;
+            console.log("CALLBACK KELDI:", query.data);
+
     if(query.data === "hello"){
        await  bot.sendPhoto(chatID, "./pictures/image.png")
     }else if (query.data === "/sybau"){
@@ -84,9 +91,13 @@ bot.on("callback_query", async (query)=> {
         await bot.sendMessage(chatID, "Cancelled!");
 
         break;
-        }
-        
-    });
+
+         
+    
+    
+    
+    
+    }});
 }
 
 
