@@ -827,12 +827,14 @@ const bot = require("./bot/bot")
 const callback = require("./callback");
 const messages = require("./messages");
 const id = require("./id")
+const myCommands = require("./myCommands")
 const app = express();
 const PORT = process.env.PORT || 3000;
 const passkey = {};
 callback(bot);
 messages(bot);
 id(bot)
+myCommands(bot);
 
 app.get("/", (req, res) => {
     res.send("Bot is running!");
@@ -856,5 +858,3 @@ function sleep(ms){
 console.log(process.uptime());
 
 
-
-myCommands(bot);
