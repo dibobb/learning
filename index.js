@@ -830,7 +830,6 @@ const id = require("./id")
 const myCommands = require("./myCommands")
 const app = express();
 const PORT = process.env.PORT || 3000;
-const passkey = {};
 callback(bot);
 messages(bot);
 id(bot)

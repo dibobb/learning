@@ -1,3 +1,7 @@
+
+const passkey = {};
+
+
 function messages (bot){
 bot.on("message", async (msg) => {
 
