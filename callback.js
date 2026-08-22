@@ -1,5 +1,5 @@
 
-
+const passkey = {}
 function callback (bot){
 bot.on("callback_query", async (query)=> {
     const chatID = query.message.chat.id;
