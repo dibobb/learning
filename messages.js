@@ -647,9 +647,11 @@ await bot.sendMediaGroup(chatID, [
                         case "/thing":
                             if(username === "Motiondibob"){
                             await    bot.sendPhoto(chatID, "AgACAgIAAxkBAAIJvmqKBI98L6FIr-sqdLX7F_T0fQarAAJXH2sbRCBQSO3Cd9HX_pWGAQADAgADeAADPQQ")
+                            }else{
+
+                                await bot.sendMessage(chatID, "This command does not  works for you!");
                             }
 
-                            await bot.sendMessage(chatID, "This command does not  works for you!");
 
                             break;
 
