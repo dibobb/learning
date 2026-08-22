@@ -640,7 +640,7 @@ await bot.sendMediaGroup(chatID, [
                     bot.sendSticker(chatID, "CAACAgIAAxkBAAIE8Wps71Aqgb5ljWGf_nj81oR1Fp6OAAItNwACS2EJSR9_jgyLH804PQQ")
 
                     break;
-                    case "bot":
+                    case "/bot":
                         bot.sendMessage(chatID, "@AniFilmBot");
                         break;
 
