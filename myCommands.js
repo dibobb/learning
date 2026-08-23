@@ -44,9 +44,6 @@ async function myCommands (bot) {
   },{
     command: "bot",
     description: "bot"
-  },{
-    command: "thing",
-    description: "a thing"
   },
 ])}catch(error){
     console.log(error);
