@@ -14,13 +14,6 @@ bot.on("message", async (msg) => {
 
 
 
-  if(text ==="/freebobux"){
-         await bot.sendMessage(
-              chatID,
-              "Kambag'aaaaaal ishla 😂🖕"
-           );
-
-  }
 
 
   if (passkey[chatID]) {
@@ -644,6 +637,14 @@ await bot.sendMediaGroup(chatID, [
                     case "/bot":
                         bot.sendMessage(chatID, "@AniFilmBot");
                         break;
+
+                        case "/freebobux":
+                             await bot.sendMessage(
+              chatID,
+              "Kambag'aaaaaal ishla 😂🖕"
+           );
+
+           break;
 
                        
 
