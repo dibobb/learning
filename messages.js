@@ -168,7 +168,7 @@ await bot.sendMediaGroup(chatID, [
 
             case "Music":
 
-         await  bot.sendMessage(chatID, ` Bor musiclar: \n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4:Rise up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive `,
+         await  bot.sendMessage(chatID, ` Bor musiclar: \n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4:Rise up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive\n 7: Solo leveling `,
 
              {
                parse_mode: "HTML",
@@ -180,7 +180,8 @@ await bot.sendMediaGroup(chatID, [
                              {text: "3", callback_data: "music_3"},
                              {text: "4", callback_data: "music_4"},
                              {text: "5", callback_data: "music_5"},
-                             {text: "6", callback_data: "music_6"}
+                             {text: "6", callback_data: "music_6"},
+                             {text: "7", callback_data: "music_7"},
                             
                         ]
                     ]
@@ -587,7 +588,7 @@ await bot.sendMediaGroup(chatID, [
               break;
 
             case "/my":
- bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive ",
+ bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive\n 7: Solo leveling ",
     {
     reply_markup:{
         inline_keyboard:[
@@ -599,6 +600,8 @@ await bot.sendMediaGroup(chatID, [
                 {text: "4", callback_data: "music_4"},
                 {text: "5", callback_data: "music_5"},
                 {text: "6", callback_data: "music_6"},
+                {text: "7", callback_data: "music_7"},
+
 
             ]   
                 

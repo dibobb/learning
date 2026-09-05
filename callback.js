@@ -84,6 +84,9 @@ bot.on("callback_query", async (query)=> {
                 
                     
        break;
+       case "music_7":
+         await bot.sendAudio(chatID, "./music/like.mp3")
+       break;
 
        case "cringe_cancel":
         delete passkey[chatID];
