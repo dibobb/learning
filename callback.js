@@ -86,9 +86,7 @@ bot.on("callback_query", async (query)=> {
                     
        break;
        case "music_7":
-         await bot.sendAudio(chatID, "./music/like.mp3", {
-            title: "Like"
-         })
+         await bot.sendAudio(chatID, "CQACAgQAAxkBAAIK2mqcTM7cVWNhd5ucmjJp4_qfytg-AALwHwACNyiZUHWYfiDQFSWuPQQ")
        break;
 
        case "cringe_cancel":
