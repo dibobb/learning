@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { title } = require("process");
 const passkey = {}
 
 function sleep(ms){
@@ -85,7 +86,9 @@ bot.on("callback_query", async (query)=> {
                     
        break;
        case "music_7":
-         await bot.sendAudio(chatID, "./music/like.mp3")
+         await bot.sendAudio(chatID, "./music/like.mp3", {
+            title: "Like"
+         })
        break;
 
        case "cringe_cancel":
