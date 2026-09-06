@@ -12,10 +12,10 @@ function reaction (bot) {
     
     try{
 
-        await bot.setMessageReaction(chatId, messageId, [
+     const result =    await bot.setMessageReaction(chatId, messageId, [
         {type: "emoji", emoji: "👌"}
      ]);
-     console.log("reaction qoyldi");
+     console.log("reaction qoyldi", result);
      
     }catch(error){
 console.log("xato",error.message);
