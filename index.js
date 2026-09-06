@@ -11,12 +11,14 @@ const callback = require("./callback");
 const messages = require("./messages");
 const id = require("./id")
 const myCommands = require("./myCommands")
+import reaction from "./reaction";
 const app = express();
 const PORT = process.env.PORT || 3000;
 callback(bot);
 messages(bot);
 id(bot)
 myCommands(bot);
+reaction(bot)
 
 app.get("/", (req, res) => {
     res.send("Bot is running!");
