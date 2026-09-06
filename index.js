@@ -11,7 +11,7 @@ const callback = require("./callback");
 const messages = require("./messages");
 const id = require("./id")
 const myCommands = require("./myCommands")
-import reaction from "./reaction";
+import reaction from "./reaction.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 callback(bot);
