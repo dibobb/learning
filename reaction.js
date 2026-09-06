@@ -7,9 +7,21 @@ function reaction (bot) {
     const chatId = msg.chat.id
     const messageId = msg.message_id;
 
-     await bot.setMessageReaction(chatId, messageId, [
+    console.log("audi keldi");
+    console.log(messageId);
+    
+    try{
+
+        await bot.setMessageReaction(chatId, messageId, [
         {type: "emoji", emoji: "👌"}
-     ])
+     ]);
+     console.log("reaction qoyldi");
+     
+    }catch(error){
+console.log("xato",error.message);
+
+    }
+     
 
     })
 }
