@@ -7,7 +7,7 @@ function reaction (bot) {
     const chatId = msg.chat.id
     const messageId = msg.message_id;
 
-     await bot.sendMessageReaction(chatId, messageId, [
+     await bot.setMessageReaction(chatId, messageId, [
         {type: "emoji", emoji: "👌"}
      ])
 
