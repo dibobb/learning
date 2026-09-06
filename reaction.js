@@ -26,5 +26,4 @@ console.log("xato",error.message);
     })
 }
 
-
-export default reaction
+module.exports = reaction
