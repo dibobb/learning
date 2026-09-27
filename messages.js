@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { type } = require("os");
 const passkey = {};
 // const userState = {}
 
@@ -78,6 +79,9 @@ await bot.sendMediaGroup(chatID, [
     {
         type: "photo",
         media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+    },{
+        type: "photo",
+        media: "AgACAgIAAxkBAAILi2q5UgWZWgKvvUwi7RYrNxbvF-UeAALAImsbii7ISd_VqP5BVxXpAQADAgADeQADPQQ"
     }
 ]);
 
@@ -453,6 +457,9 @@ await bot.sendMediaGroup(chatID, [
     {
         type: "photo",
         media: "AgACAgIAAxkBAAIJCmqI6ISpFjqcASv23eY5-XrvdLfXAAL3DGsbb1DASdxZvrkIUoXgAQADAgADeQADPQQ"
+    },{
+        type: "photo",
+        media: "AgACAgIAAxkBAAILi2q5UgWZWgKvvUwi7RYrNxbvF-UeAALAImsbii7ISd_VqP5BVxXpAQADAgADeQADPQQ"
     }
 ]);
 

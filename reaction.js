@@ -18,7 +18,7 @@ function reaction (bot) {
      console.log("reaction qoyldi", result);
      
     }catch(error){
-console.log("xato",error.message);
+console.log("xato", error.message);
 
     }
      
