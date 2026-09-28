@@ -308,7 +308,7 @@ mavjud commandlar:
                 "en-US",
                 {
                     timeZone:"Asia/Tashkent",
-                    hour:"1-digit",
+                    hour:"2-digit",
                     minute:"2-digit",
                     second: "2-digit",
                     hour12:true
