@@ -713,8 +713,10 @@ await bot.sendMediaGroup(chatID, [
            await  bot.sendMediaGroup(chatID, filteredanime)
             break;
                        
-      console.log(JSON.stringify(filteredanime, null, 2));
-      
+         filteredanime.forEach((item, index)=> {
+            console.log(index, JSON.stringify(item.media));
+            
+         })      
                    
 
                         }
