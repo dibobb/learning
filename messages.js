@@ -57,6 +57,9 @@ const anime = [
 
 const filteredanime = anime.map(({name, ...anime}) => anime);
 
+const filter1 = filteredanime.slice(0, 10)
+const filter2 = filteredanime.slice(10)
+
 function messages (bot){
 bot.on("message", async (msg) => {
 
@@ -710,13 +713,14 @@ await bot.sendMediaGroup(chatID, [
 
            break;
            case "anime":
-           await  bot.sendMediaGroup(chatID, filteredanime)
+           await  bot.sendMediaGroup(chatID, filter1)
+           if(filter2.length > 0){
+
+               await  bot.sendMediaGroup(chatID, filter2)
+           }
             break;
                        
-         filteredanime.forEach((item, index)=> {
-            console.log(index, JSON.stringify(item.media));
-            
-         })      
+               
                    
 
                         }
