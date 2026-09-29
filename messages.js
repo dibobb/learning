@@ -655,7 +655,9 @@ await bot.sendMediaGroup(chatID, [
            );
 
            break;
-
+           case "anime":
+           await  bot.sendVideo(chatID, "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ")
+            break;
                        
 
                    
