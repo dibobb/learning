@@ -19,7 +19,7 @@ const anime = [
                 name: "episode 3",
                 type: "video",
                 media: "BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ",
-                caption: "Episod-3"
+                caption: "Episode-3"
 
             }, {  
                 name: "episode 4",
@@ -31,7 +31,7 @@ const anime = [
                 name: "episode 5",
                 type: "video",
                 media: "BAACAgIAAxkBAAIMO2q72HNzdt_1oFO8rhdaJOqpmUHkAALDdgACeh_RSIkz8h04dnSePQQ",
-                caption: "Episode1-5"
+                caption: "Episode-5"
 
             }, {  
                 name: "episode 6",
