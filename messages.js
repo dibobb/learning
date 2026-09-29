@@ -15,7 +15,7 @@ const anime = [
             }, {  
                 name: "episode 3",
                 type: "video",
-                media: " BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ"
+                media: "BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ"
             }, {  
                 name: "episode 4",
                 type: "video",
@@ -39,7 +39,7 @@ const anime = [
             }, {  
                 name: "episode 9",
                 type: "video",
-                media: " BAACAgIAAxkBAAIMPmq72HNGNjCOt4tXlrcNHiyXWHREAAKRhgACX7joSURb1v-X0erzPQQ"
+                media: "BAACAgIAAxkBAAIMPmq72HNGNjCOt4tXlrcNHiyXWHREAAKRhgACX7joSURb1v-X0erzPQQ"
             }, {  
                 name: "episode 10",
                 type: "video",
