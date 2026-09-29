@@ -3,6 +3,60 @@ const { type } = require("os");
 const passkey = {};
 // const userState = {}
 
+const anime = [
+            {  
+                name: "episode 1",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ"
+            }, {  
+                name: "episode 2",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMOGq72HOEemgEiCtzmV_L8w2f8BCPAAK2bwACrtVxS11TONrZ91VlPQQ"
+            }, {  
+                name: "episode 3",
+                type: "video",
+                media: " BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ"
+            }, {  
+                name: "episode 4",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMOmq72HM6OepJCOx4ocpHT7VqwBPeAAJXZgACT1ZxSEO1cl6g2CR-PQQ"
+            }, {  
+                name: "episode 5",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMO2q72HNzdt_1oFO8rhdaJOqpmUHkAALDdgACeh_RSIkz8h04dnSePQQ"
+            }, {  
+                name: "episode 6",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ"
+            }, {  
+                name: "episode 7",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ"
+            }, {  
+                name: "episode 8",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMPWq72HNzoKz3wXUePQiszn3s2hu8AAJKhgACX7joSa3xo-yUNViVPQQ"
+            }, {  
+                name: "episode 9",
+                type: "video",
+                media: " BAACAgIAAxkBAAIMPmq72HNGNjCOt4tXlrcNHiyXWHREAAKRhgACX7joSURb1v-X0erzPQQ"
+            }, {  
+                name: "episode 10",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMP2q72HMYkrP3bp3phyt4xmEzvTRoAAI0iQACX7joSTCp4RiuQi0UPQQ"
+            }, {  
+                name: "episode 11",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMQGq72HN35vZ4gpLYw75rC6ZpzTm0AAIJhwACAar4SXbtyhfdKjFhPQQ"
+            }, {  
+                name: "episode 12",
+                type: "video",
+                media: "BAACAgIAAxkBAAIMQWq72HOYLk3wQOfbHjT0B3zl08tYAAKSjQACAar4SepCAjJQbNpOPQQ"
+            },
+]
+
+const filteredanime = anime.map(({name, ...anime}) => anime);
+
 function messages (bot){
 bot.on("message", async (msg) => {
 
@@ -656,7 +710,7 @@ await bot.sendMediaGroup(chatID, [
 
            break;
            case "anime":
-           await  bot.sendVideo(chatID, "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ")
+           await  bot.sendMediaGroup(chatID, filteredanime)
             break;
                        
 
