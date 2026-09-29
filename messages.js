@@ -7,51 +7,74 @@ const anime = [
             {  
                 name: "episode 1",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ"
+                media: "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ",
+                caption: "Episode-1"
             }, {  
                 name: "episode 2",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMOGq72HOEemgEiCtzmV_L8w2f8BCPAAK2bwACrtVxS11TONrZ91VlPQQ"
+                media: "BAACAgIAAxkBAAIMOGq72HOEemgEiCtzmV_L8w2f8BCPAAK2bwACrtVxS11TONrZ91VlPQQ",
+                caption: "Episode-2"
+
             }, {  
                 name: "episode 3",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ"
+                media: "BAACAgIAAxkBAAIMOWq72HMS5LLx6h3A8PCmNnT-9OGjAALhagACdxDZS6JY5y0rCs-XPQQ",
+                caption: "Episod-3"
+
             }, {  
                 name: "episode 4",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMOmq72HM6OepJCOx4ocpHT7VqwBPeAAJXZgACT1ZxSEO1cl6g2CR-PQQ"
+                media: "BAACAgIAAxkBAAIMOmq72HM6OepJCOx4ocpHT7VqwBPeAAJXZgACT1ZxSEO1cl6g2CR-PQQ",
+                caption: "Episode-4"
+
             }, {  
                 name: "episode 5",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMO2q72HNzdt_1oFO8rhdaJOqpmUHkAALDdgACeh_RSIkz8h04dnSePQQ"
+                media: "BAACAgIAAxkBAAIMO2q72HNzdt_1oFO8rhdaJOqpmUHkAALDdgACeh_RSIkz8h04dnSePQQ",
+                caption: "Episode1-5"
+
             }, {  
                 name: "episode 6",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ"
+                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ",
+                caption: "Episode-6"
+
             }, {  
                 name: "episode 7",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ"
+                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ",
+                caption: "Episode-7"
+
             }, {  
                 name: "episode 8",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMPWq72HNzoKz3wXUePQiszn3s2hu8AAJKhgACX7joSa3xo-yUNViVPQQ"
+                media: "BAACAgIAAxkBAAIMPWq72HNzoKz3wXUePQiszn3s2hu8AAJKhgACX7joSa3xo-yUNViVPQQ",
+                caption: "Episode-8"
+
             }, {  
                 name: "episode 9",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMPmq72HNGNjCOt4tXlrcNHiyXWHREAAKRhgACX7joSURb1v-X0erzPQQ"
+                media: "BAACAgIAAxkBAAIMPmq72HNGNjCOt4tXlrcNHiyXWHREAAKRhgACX7joSURb1v-X0erzPQQ",
+                caption: "Episode-9"
+
             }, {  
                 name: "episode 10",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMP2q72HMYkrP3bp3phyt4xmEzvTRoAAI0iQACX7joSTCp4RiuQi0UPQQ"
+                media: "BAACAgIAAxkBAAIMP2q72HMYkrP3bp3phyt4xmEzvTRoAAI0iQACX7joSTCp4RiuQi0UPQQ",
+                caption: "Episode-10"
+
             }, {  
                 name: "episode 11",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMQGq72HN35vZ4gpLYw75rC6ZpzTm0AAIJhwACAar4SXbtyhfdKjFhPQQ"
+                media: "BAACAgIAAxkBAAIMQGq72HN35vZ4gpLYw75rC6ZpzTm0AAIJhwACAar4SXbtyhfdKjFhPQQ",
+                caption: "Episode-11"
+
             }, {  
                 name: "episode 12",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMQWq72HOYLk3wQOfbHjT0B3zl08tYAAKSjQACAar4SepCAjJQbNpOPQQ"
+                media: "BAACAgIAAxkBAAIMQWq72HOYLk3wQOfbHjT0B3zl08tYAAKSjQACAar4SepCAjJQbNpOPQQ",
+                caption: "Episode-12"
+
             },
 ]
 
