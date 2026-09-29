@@ -27,7 +27,7 @@ const anime = [
             }, {  
                 name: "episode 6",
                 type: "video",
-                media: "BAACAgIAAxkBAAIMLGq71Vi0kfm4py5tIQpTFM0u3IzhAAJWYgAC_soQSvoM2cNNHixDPQQ"
+                media: "BAACAgIAAxkBAAIMPGq72HMRHil1tl4PCbpWMHRQefENAAIhiwACX7jgSVTcxCpBFD9dPQQ"
             }, {  
                 name: "episode 7",
                 type: "video",
@@ -572,7 +572,7 @@ await bot.sendMediaGroup(chatID, [
 
         default:
 
-          await bot.sendSticker(chatID,"CAACAgEAAxkBAAIE0Gps4nnWE36Ai6hut3bYPZ3MsY61AAJBAwACDsLwRxThhrV-ovE_PQQ" )        
+          await bot.sendSticker(chatID,"CAACAgIAAxkBAAIMVGq74CqaZg9p7mNTniem5AvgTCaYAAIVPAAClv2JSqAHGPCILGA6PQQ" )        
 // await axios.post(
 //   `https://api.telegram.org/bot${process.env.TOKEN}/sendMessage`,
 //   {
