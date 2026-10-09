@@ -353,7 +353,7 @@ await bot.sendMediaGroup(chatID, [
                 "./pictures/hello.png",
                 {
                     caption:
-`hello \`${firstname}\` 😉
+`hello ${firstname} 😉
 
 mavjud commandlar:
  /start | /freebobux | /time | /stock | /sticker | /photos \n | /my` 
