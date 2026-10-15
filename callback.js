@@ -10,6 +10,7 @@ function callback (bot){
     console.log("callback handler keldi");
     
 bot.on("callback_query", async (query)=> {
+    await bot.answerCallbackQuery(query.id)
     const chatID = query.message.chat.id;
             console.log("CALLBACK KELDI:", query.data);
 
