@@ -7,6 +7,8 @@ function sleep(ms){
 }
 
 function callback (bot){
+    console.log("callback handler keldi");
+    
 bot.on("callback_query", async (query)=> {
     const chatID = query.message.chat.id;
             console.log("CALLBACK KELDI:", query.data);
