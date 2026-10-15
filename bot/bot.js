@@ -1,4 +1,4 @@
-const telegramBot = require("node-telegram-bot-api");
+const telegramBot = require("node-telegram-bot-api").default;
 
 if(!process.env.TOKEN){
     console.log("TOKEN Toplmadi!");
