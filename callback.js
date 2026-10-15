@@ -1,5 +1,5 @@
 const fs = require("fs");
-const passkey = require("/state.js")
+const passkey = require("./state.js")
 
 
 function sleep(ms){
