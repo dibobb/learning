@@ -6,7 +6,7 @@ function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-function callback (bot){
+ async function callback (bot){
     console.log("callback handler keldi");
     
 bot.on("callback_query", async (query)=> {
