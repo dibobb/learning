@@ -89,6 +89,14 @@ bot.on("callback_query", async (query)=> {
          await bot.sendAudio(chatID, "CQACAgQAAxkBAAIK2mqcTM7cVWNhd5ucmjJp4_qfytg-AALwHwACNyiZUHWYfiDQFSWuPQQ")
        break;
 
+       case"music_8":
+       await bot.sendAudio(chatID, " CQACAgIAAxkBAAINWmrQr-GTVQk1-qxbkW6u4jJNY5MRAAJerAACp1GISlfT0_skCgPDPQQ",{
+        title: "Clover legends",
+        performer: "Clover legends"
+        // precise
+       })
+       break;
+
        case "cringe_cancel":
         delete passkey[chatID];
 

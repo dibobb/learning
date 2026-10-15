@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { type } = require("os");
+const callback = require("./callback");
 const passkey = {};
 // const userState = {}
 
@@ -266,6 +267,8 @@ await bot.sendMediaGroup(chatID, [
                              {text: "5", callback_data: "music_5"},
                              {text: "6", callback_data: "music_6"},
                              {text: "7", callback_data: "music_7"},
+                             {text: "8", callback_data: "music_8"}
+
                             
                         ]
                     ]
@@ -675,7 +678,7 @@ await bot.sendMediaGroup(chatID, [
               break;
 
             case "/my":
- bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive\n 7: Solo leveling ",
+ bot.sendMessage(chatID, "Playlaringiz:\n1: WA-WA-WA Funk \n2:Montagem-Derecao(Mega slowed)\n  3: Heavenly_Jumpstyle\n 4: Rise Up\n 5: Andreas Stone With Denniz Jamm - Black Sunrise\n 6: Dive\n 7: Solo leveling\n 8: Clover legends ",
     {
     reply_markup:{
         inline_keyboard:[
@@ -688,6 +691,7 @@ await bot.sendMediaGroup(chatID, [
                 {text: "5", callback_data: "music_5"},
                 {text: "6", callback_data: "music_6"},
                 {text: "7", callback_data: "music_7"},
+                {text: "8", callback_data: "music_8"}
 
 
             ]   
