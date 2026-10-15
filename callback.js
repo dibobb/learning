@@ -39,6 +39,8 @@ bot.on("callback_query", async (query)=> {
 
   switch(query.data){
     case "music_1":
+        console.log("music loaded out!:", query.data);
+        
      await    bot.sendAudio(chatID,
             fs.createReadStream("./music/wawawa.m4a")
          )
@@ -79,23 +81,23 @@ bot.on("callback_query", async (query)=> {
                 await bot.sendAudio(chatID, "CQACAgEAAxkBAAIH-GqGQnRm89PSSIfZV0lZ0QJPb6UbAAJ2BAAC7I_hR7VtBwfMZ4L_PQQ")
                 break;
 
-                case "cringe_okay":
-                    passkey[chatID] = true;
-                   await  bot.sendMessage(chatID, "Waiting for the pass key...");
-                
+                case "music_7":
+                    await bot.sendAudio(chatID, "CQACAgQAAxkBAAIK2mqcTM7cVWNhd5ucmjJp4_qfytg-AALwHwACNyiZUHWYfiDQFSWuPQQ")
+                    break;
                     
-       break;
-       case "music_7":
-         await bot.sendAudio(chatID, "CQACAgQAAxkBAAIK2mqcTM7cVWNhd5ucmjJp4_qfytg-AALwHwACNyiZUHWYfiDQFSWuPQQ")
-       break;
-
-       case"music_8":
-       await bot.sendAudio(chatID, " CQACAgIAAxkBAAINWmrQr-GTVQk1-qxbkW6u4jJNY5MRAAJerAACp1GISlfT0_skCgPDPQQ",{
-        title: "Clover legends",
-        performer: "Clover legends"
-        // precise
-       })
-       break;
+                    case"music_8":
+                    await bot.sendAudio(chatID, " CQACAgIAAxkBAAINWmrQr-GTVQk1-qxbkW6u4jJNY5MRAAJerAACp1GISlfT0_skCgPDPQQ",{
+                        title: "Clover legends",
+                        performer: "Clover legends"
+                        // precise
+                    })
+                    break;
+                    case "cringe_okay":
+                        passkey[chatID] = true;
+                       await  bot.sendMessage(chatID, "Waiting for the pass key...");
+                    
+                        
+           break;
 
        case "cringe_cancel":
         delete passkey[chatID];
