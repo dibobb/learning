@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { type } = require("os");
 const callback = require("./callback");
-const passkey = require("/state.js")
+const passkey = require("./state.js")
 // const userState = {}
 
 const anime = [
