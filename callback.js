@@ -1,6 +1,6 @@
 const fs = require("fs");
-const { title } = require("process");
-const passkey = {}
+const passkey = require("/state.js")
+
 
 function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms))
