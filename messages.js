@@ -488,7 +488,7 @@ break;
  case "/cringe":
  console.log(username);
  
- if(username === "dibob"){
+ if(username === "Motiondibob"){
      bot.sendMessage(chatID, "Hello!", username);
     // 1-albom: 10 ta photo
 await bot.sendMediaGroup(chatID, [
