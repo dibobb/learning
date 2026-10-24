@@ -21,7 +21,7 @@ myCommands(bot);
 // reaction(bot)
 
 app.get("/", (req, res) => {
-    res.send("bilol kot!");
+    res.send("bot started running!");
 });
 
 app.listen(PORT, () => {

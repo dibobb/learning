@@ -6,6 +6,9 @@ if(!process.env.TOKEN){
     
 }
 
+console.log("Expected TOKEN:",  Boolean(process.env.TOKEN));
+
+
 const bot = new telegramBot(process.env.TOKEN, {
     polling: true
 });
