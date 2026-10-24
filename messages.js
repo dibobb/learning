@@ -748,6 +748,7 @@ await bot.sendMediaGroup(chatID, [
             break;
 
               case "/thing":
+                case "/Thing":
                             if(username === "Motiondibob"){
                             await    bot.sendPhoto(chatID, "AgACAgIAAxkBAAIJvmqKBI98L6FIr-sqdLX7F_T0fQarAAJXH2sbRCBQSO3Cd9HX_pWGAQADAgADeAADPQQ")
                             } 
