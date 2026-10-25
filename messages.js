@@ -1,7 +1,9 @@
 const fs = require("fs");
 const { type } = require("os");
 const callback = require("./callback");
-const passkey = require("./state.js")
+const passkey = require("./state.js");
+const { start } = require("repl");
+const { count } = require("console");
 // const userState = {}
 
 const anime = [
@@ -83,7 +85,30 @@ const filteredanime = anime.map(({name, ...anime}) => anime);
 
 const filter1 = filteredanime.slice(0, 10)
 const filter2 = filteredanime.slice(10);
+const requests = map()
 
+function rateLimit (userId){
+    const now = Date.now()
+    const data = requests.get(userId)
+
+
+    if(!data || now - data.start >= 60_000){
+        requests.set(userId, {
+            start: now,
+            count: 1
+        })
+
+        return true;
+    }
+
+
+    if(requests.count >= 10){
+        return false;
+    }
+
+        data.count++
+        return true    
+}
 async function messages (bot){
 bot.on("message", async (msg) => {
 
@@ -94,7 +119,10 @@ bot.on("message", async (msg) => {
   
     console.log("Kelgan text:", text);
 
-
+    
+    if(!rateLimit(userId)){
+       return bot.sendMessage(chatID, "Too many attempts, try again later. ")
+    }
 
 
 

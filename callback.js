@@ -1,7 +1,6 @@
 const fs = require("fs");
 const passkey = require("./state.js")
 
-
 function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms))
 }
