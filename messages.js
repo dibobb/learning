@@ -85,7 +85,7 @@ const filteredanime = anime.map(({name, ...anime}) => anime);
 
 const filter1 = filteredanime.slice(0, 10)
 const filter2 = filteredanime.slice(10);
-const requests = map()
+const requests = new Map()
 
 function rateLimit (userId){
     const now = Date.now()
@@ -102,7 +102,7 @@ function rateLimit (userId){
     }
 
 
-    if(requests.count >= 10){
+    if(data.count >= 10){
         return false;
     }
 
@@ -116,11 +116,12 @@ bot.on("message", async (msg) => {
     const text = msg.text?.trim();
     const firstname = msg.from.first_name; 
     const username = msg.from.username
+    const userID = msg.from.id
   
     console.log("Kelgan text:", text);
 
     
-    if(!rateLimit(userId)){
+    if(!rateLimit(userID)){
        return bot.sendMessage(chatID, "Too many attempts, try again later. ")
     }
 
