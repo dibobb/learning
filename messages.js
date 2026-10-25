@@ -95,7 +95,8 @@ function rateLimit (userId){
     if(!data || now - data.start >= 60_000){
         requests.set(userId, {
             start: now,
-            count: 1
+            count: 1,
+            blocked: 0
         })
 
         return true;
@@ -103,9 +104,14 @@ function rateLimit (userId){
 
 
     if(data.count >= 10){
+        data.blocked = now + 15_000
         return false;
     }
 
+    if(now < data.blocked){
+        return false;
+    }
+    
         data.count++
         return true    
 }
@@ -120,9 +126,12 @@ bot.on("message", async (msg) => {
   
     console.log("Kelgan text:", text);
 
-    
-    if(!rateLimit(userID)){
-       return bot.sendMessage(chatID, "Too many attempts, try again later. ")
+    if(username !== "Motiondibob"){
+
+        if(!rateLimit(userID)){
+           await  bot.sendMessage(chatID, "Too many attempts, try again later.")
+           return bot.sendMessage(chatID, "Now you can send requests after 15seconds.")
+        }
     }
 
 
