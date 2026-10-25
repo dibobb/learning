@@ -105,13 +105,15 @@ function rateLimit (userId){
 
     if(data.count >= 10){
         data.blocked = now + 15_000
+        data.count = 0
+        data.start = now
         return false;
     }
 
     if(now < data.blocked){
         return false;
     }
-    
+
         data.count++
         return true    
 }
