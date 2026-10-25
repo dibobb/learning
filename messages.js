@@ -82,7 +82,7 @@ const anime = [
 const filteredanime = anime.map(({name, ...anime}) => anime);
 
 const filter1 = filteredanime.slice(0, 10)
-const filter2 = filteredanime.slice(10)
+const filter2 = filteredanime.slice(10);
 
 async function messages (bot){
 bot.on("message", async (msg) => {
