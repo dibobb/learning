@@ -2,7 +2,6 @@
 async function myCommands (bot) {
     try{
  await  bot.setMyCommands([
-
   {
     command: "start",
     description: "Botni ishga tushirish"

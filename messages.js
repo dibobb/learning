@@ -4,6 +4,8 @@ const callback = require("./callback");
 const passkey = require("./state.js");
 const { start } = require("repl");
 const { count } = require("console");
+const { url } = require("inspector");
+const { text } = require("stream/consumers");
 // const userState = {}
 
 const anime = [
@@ -117,6 +119,19 @@ function rateLimit (userId){
         data.count++
         return true    
 }
+
+
+
+const keyboard = {
+    inline_keyboard:[
+        [
+            {
+                url: "https://youtube.com",
+                text: "Open"
+            }
+        ]
+    ]
+}
 async function messages (bot){
 bot.on("message", async (msg) => {
 
@@ -127,6 +142,10 @@ bot.on("message", async (msg) => {
     const userID = msg.from.id
   
     console.log("Kelgan text:", text);
+
+    await bot.sendMessage(chatID, "Open", {
+        reply_markup: keyboard
+    })
 
     if(username !== "Motiondibob"){
 
