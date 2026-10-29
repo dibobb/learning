@@ -3,7 +3,7 @@ const { type } = require("os");
 const callback = require("./callback");
 const passkey = require("./state.js");
 const { start } = require("repl");
-const { count } = require("console");
+const { count, log } = require("console");
 const { url } = require("inspector");
 const { text } = require("stream/consumers");
 // const userState = {}
@@ -409,7 +409,8 @@ await bot.sendMediaGroup(chatID, [
 
 
         case "/start":
-
+              console.log(username);
+              
             await bot.sendPhoto(
                 chatID,
                 "./pictures/hello.png",
