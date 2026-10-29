@@ -122,16 +122,16 @@ function rateLimit (userId){
 
 
 
-const keyboard = {
-    inline_keyboard:[
-        [
-            {
-                url: "https://youtube.com",
-                text: "Open"
-            }
-        ]
-    ]
-}
+// const keyboard = {
+//     inline_keyboard:[
+//         [
+//             {
+//                 url: "https://youtube.com",
+//                 text: "Open"
+//             }
+//         ]
+//     ]
+// }
 async function messages (bot){
 bot.on("message", async (msg) => {
 
@@ -143,9 +143,9 @@ bot.on("message", async (msg) => {
   
     console.log("Kelgan text:", text);
 
-    await bot.sendMessage(chatID, "Open", {
-        reply_markup: keyboard
-    })
+    // await bot.sendMessage(chatID, "Open", {
+    //     reply_markup: keyboard
+    // })
 
     if(username !== "Motiondibob"){
 

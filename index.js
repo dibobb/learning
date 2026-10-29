@@ -11,6 +11,7 @@ const callback = require("./callback.js");
 const messages = require("./messages.js");
 const id = require("./id.js")
 const myCommands = require("./myCommands.js")
+const menu = require("./menu.js")
 // const reaction = require('./reaction')
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,6 +19,7 @@ callback(bot);
 messages(bot);
 id(bot)
 myCommands(bot);
+menu(bot)
 // reaction(bot)
 
 app.get("/", (req, res) => {
